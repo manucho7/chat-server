@@ -32,6 +32,9 @@ class Server {
         // CORS
         this.app.use( cors() );
 
+        //API ENDPOINTS
+        this.app.use('/api/login', require('../router/auth'));
+
     }
 
     // Esta configuración se puede tener aquí o como propieda de clase
