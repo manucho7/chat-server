@@ -76,7 +76,6 @@ const login = async(req, res) => {
         }
 
         const token = await generarJWT( usuarioDB.id );
-
         
         res.json({
             ok: true,
@@ -95,6 +94,7 @@ const login = async(req, res) => {
 }
 
 const renewToken = async(req, res) => {
+
     res.json({
         ok: true,
         msg: 'renew'
