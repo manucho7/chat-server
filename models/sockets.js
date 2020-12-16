@@ -13,12 +13,20 @@ class Sockets {
         // On connection
         this.io.on('connection', ( socket ) => {
 
-            // Escuchar evento: mensaje-to-server
-            socket.on('mensaje-to-server', ( data ) => {
-                console.log( data );
-                
-                this.io.emit('mensaje-from-server', data );
-            });
+            //TODO: Validar JWT 
+            //Si token no es valido, desconectarlo
+
+            //TODO: Saber que usuario esta activo via token.uid
+
+            //TODO: Emitir todos los usuarios conectados
+
+            //TODO: Socket join
+
+            //TODO: escuchar cuando cliente manda msj
+            //msg personal
+
+            //TODO disconnect
+            //Marcar en DB que el usuario se desconecto
             
         
         });
