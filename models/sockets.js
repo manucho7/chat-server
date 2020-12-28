@@ -21,6 +21,8 @@ class Sockets {
                 return socket.disconnect();
             }
 
+            console.log('cliente conectado');
+
             const usuario = await usuarioConectado( uid );
 
             console.log(`Se conecto: ${usuario.nombre}`);
