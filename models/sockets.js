@@ -21,9 +21,10 @@ class Sockets {
                 return socket.disconnect();
             }
 
-            console.log('cliente conectado');
-
             const usuario = await usuarioConectado( uid );
+
+            //Unir al usuario a una sala de socket.io
+            socket.join( uid );
 
             console.log(`Se conecto: ${usuario.nombre}`);
 
@@ -39,7 +40,10 @@ class Sockets {
 
             //TODO: escuchar cuando cliente manda msj
             //msg personal
-
+            socket.on('mensaje-personal', (payload) => {
+                console.log(payload);
+            })
+            
             //TODO disconnect
             //Marcar en DB que el usuario se desconecto
             
