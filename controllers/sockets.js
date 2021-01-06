@@ -36,7 +36,7 @@ const grabarMensaje = async( payload ) => {
 
     try {
         
-        const mensaje = new Mensaje(payload);
+        const mensaje = new Mensaje( payload );
         await mensaje.save();
 
         return mensaje;
