@@ -1,4 +1,4 @@
-const {Schema, model} = require('mongoose');
+const { Schema, model } = require('mongoose');
 
 const MensajeSchema = Schema({
 
@@ -16,7 +16,6 @@ const MensajeSchema = Schema({
         type: String,
         required: true
     },
-
 }, {
     //Agrega fecha de creacion y modificacion por defecto
     timestamps: true
