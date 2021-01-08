@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 
+
 const MensajeSchema = Schema({
 
     de: {
@@ -15,15 +16,15 @@ const MensajeSchema = Schema({
     mensaje: {
         type: String,
         required: true
-    },
-}, {
-    //Agrega fecha de creacion y modificacion por defecto
+    }
+},{
     timestamps: true
 });
+
 
 MensajeSchema.method('toJSON', function() {
     const { __v, ...object } = this.toObject();
     return object;
 });
 
-module.exports = model('Mensaje', MensajeSchema);
+module.exports = model('Mensaje', MensajeSchema );
