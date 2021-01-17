@@ -1,5 +1,5 @@
 # chat-server
-real time chat app server application built in node - expressjs
+real time chat app server application built in node - expressjs - mongodb
 
 
 1. cd directory
